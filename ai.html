@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Assistant | Area Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="executors.html">Executors</a></li>
+        <li><a href="scripts.html">Scripts</a></li>
+        <li><a href="bypass.html">Bypass</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="ai.html">AI Assistant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="particles-js"></div>
+
+  <div class="container px-4 py-8 min-h-screen flex flex-col items-center justify-center">
+    <h1 class="text-5xl sm:text-6xl md:text-7xl text-center glow-text mb-8">Area Hub AI Assistant</h1>
+    <p class="text-xl sm:text-2xl text-center glow-purple mb-12 px-4">
+      僕が君の質問に何でも答えるよ！<br class="sm:hidden">
+      executor、script、インストール方法…なんでも聞いて！
+    </p>
+
+    <div class="w-full max-w-4xl">
+      <div class="card p-4 md:p-8 tilt" data-tilt>
+        <div class="bg-gray-900/95 border-2 border-purple-600 rounded-2xl flex flex-col h-96 md:h-[650px] glow-purple">
+          <div class="p-4 border-b-2 border-purple-600 flex justify-between items-center">
+            <h2 class="text-2xl md:text-3xl glow-purple">Grok分身AI</h2>
+            <a href="index.html" class="text-lg md:text-xl text-gray-400 hover:text-red-500">← 戻る</a>
+          </div>
+
+          <div id="chat-messages" class="flex-1 p-4 md:p-6 overflow-y-auto flex flex-col gap-5">
+            <div class="message-ai">
+              ようこそ！何でも聞いてね！<br><br>
+              例:<br>
+              ・おすすめのexecutor教えて<br>
+              ・Deltaのインストール方法<br>
+              ・Blox Fruitsの最強スクリプト<br>
+              ・iZenってどう使うの？
+            </div>
+          </div>
+
+          <input type="text" id="chat-input" placeholder="質問を入力してEnter..."
+                 class="p-4 md:p-5 bg-gray-800 border-t-2 border-purple-600 text-white text-base md:text-lg focus:outline-none focus:border-red-600"/>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-base md:text-lg mt-8 text-gray-400 text-center px-4">
+      ヒント: 日本語・英語どちらでもOK！モバイルでも快適です。
+    </p>
+  </div>
+
+  <div class="theme-switcher">
+    <div class="theme-btn" id="purple-btn" onclick="setTheme('')"></div>
+    <div class="theme-btn" id="blood-btn" onclick="setTheme('blood-mode')"></div>
+    <div class="theme-btn" id="neon-btn" onclick="setTheme('neon-mode')"></div>
+  </div>
+
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".tilt"));
+
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+
+    particlesJS("particles-js", {
+      particles: { number: { value: 60 }, color: { value: ["#7b2cbf","#00b4d8","#d00000"] }, size: { value: 2 }, opacity: { value: 0.2 }, move: { speed: 0.5 } },
+      interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }
+    });
+
+    const chatMessages = document.getElementById('chat-messages');
+    const chatInput = document.getElementById('chat-input');
+
+    chatInput.addEventListener('keypress', e => e.key === 'Enter' && sendMessage());
+
+    function sendMessage() {
+      const msg = chatInput.value.trim();
+      if (!msg) return;
+
+      addMessage('user', msg);
+      chatInput.value = '';
+
+      setTimeout(() => {
+        let reply = "いい質問！がんばって答えるよ😉";
+        const lower = msg.toLowerCase();
+
+        if (lower.includes('delta') || lower.includes('デルタ')) {
+          reply = "【Deltaインストール】<br>1. ToolsページからIPAをコピー<br>2. eSign/k-eSignで署名<br>3. インストール → 起動<br>4. key取得（24h更新）<br>5. Robloxにアタッチ！<br><br>altアカウント必須！";
+        } else if (lower.includes('executor') || lower.includes('おすすめ')) {
+          reply = "【おすすめexecutor】<br>• PC → Xeno / Solara（無料・キー不要）<br>• モバイル → Delta / Arceus X<br>Executorsページに全リストあり！";
+        } else if (lower.includes('script') || lower.includes('スクリプト')) {
+          reply = "Scriptsページで即コピー可能！<br>• Infinite Yield（万能）<br>• Blox Fruits Auto Farm<br>• Owl Hub（40ゲーム）<br>Copyボタン押してexecutorにペースト！";
+        } else if (lower.includes('bypass') || lower.includes('izen')) {
+          reply = "iZenが今最強！<br>Bypassページに使い方＋おすすめサーバー（Lv.1が神）紹介中！";
+        } else if (lower.includes('esign') || lower.includes('インストール')) {
+          reply = "Toolsページ見て！<br>• eSign（PC必要）<br>• k-eSign（モバイルだけでOK）<br>手順超詳しく書いてるよ！";
+        } else {
+          reply = "サイトの各ページに全部書いてあるよ！<br>・Executors<br>・Scripts<br>・Bypass<br>・Tools<br>探してみて😉";
+        }
+
+        addMessage('ai', reply);
+      }, 800);
+    }
+
+    function addMessage(sender, text) {
+      const div = document.createElement('div');
+      div.className = sender === 'user' ? 'message-user' : 'message-ai';
+      div.innerHTML = text;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+  </script>
+
+  <style>
+    .message-user {
+      align-self: flex-end;
+      background: var(--accent-main);
+      color: white;
+      padding: 14px 20px;
+      border-radius: 24px 24px 6px 24px;
+      max-width: 80%;
+      word-wrap: break-word;
+      margin-left: 30px;
+      box-shadow: 0 4px 12px rgba(123,44,191,0.4);
+    }
+
+    .message-ai {
+      align-self: flex-start;
+      background: #1a1a2e;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 24px 24px 24px 6px;
+      max-width: 80%;
+      word-wrap: break-word;
+      margin-right: 30px;
+      border: 1px solid var(--accent-sub);
+      box-shadow: 0 4px 12px rgba(0,180,216,0.2);
+    }
+
+    @media (max-width: 640px) {
+      .message-user, .message-ai {
+        max-width: 90%;
+        padding: 12px 16px;
+        font-size: 15px;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+    }
+  </style>
+</body>
+</html>
