@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scripts | Area Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="executors.html">Executors</a></li>
+        <li><a href="scripts.html">Scripts</a></li>
+        <li><a href="bypass.html">Bypass</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="ai.html">AI Assistant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container px-4 py-12">
+    <h1 class="text-6xl sm:text-7xl md:text-8xl text-center glow-text mb-16">Scripts</h1>
+
+    <div class="max-w-2xl mx-auto mb-16">
+      <div class="relative">
+        <input type="text" id="searchInput" placeholder="スクリプト名・ゲーム名・universal・auto-farmなどで検索..."
+               class="w-full px-8 py-6 bg-gray-900/80 border-2 border-purple-600 rounded-2xl text-white text-xl placeholder-gray-400 focus:outline-none focus:border-red-600 glow-purple transition-all"/>
+        <span class="absolute right-8 top-1/2 -translate-y-1/2 text-3xl">🔍</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="scriptGrid">
+      <!-- メインScriptBloxカード + 各スクリプトカード（コピー機能付き）そのまま -->
+       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="scriptGrid">
+
+      <!-- メイン: ScriptBlox紹介 -->
+      <div class="card tilt col-span-1 md:col-span-2 lg:col-span-3" data-tilt data-tilt-max="8" data-tilt-speed="400">
+        <h2 class="text-5xl glow-purple mb-6 text-center">Scripts - ここで即コピー可能！</h2>
+        <p class="text-xl leading-relaxed text-center mb-6">
+          人気スクリプトを直接掲載！「Copy Script」ボタンで即コピー → executorにペーストで実行可能。<br>
+          最新版は<a href="https://scriptblox.com/" target="_blank" class="glow-text underline">ScriptBlox</a>で探してね！
+        </p>
+      </div>
+
+      <!-- Infinite Yield -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Infinite Yield (Universal Admin)</h2>
+        <button onclick="copyScript('infinite_yield')" class="mb-4 px-6 py-3 bg-purple-700 hover:bg-red-700 rounded-lg glow-purple">Copy Script</button>
+        <pre class="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm"><code id="infinite_yield">loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()</code></pre>
+        <p class="text-lg leading-relaxed mt-4">
+          Roblox史上最強のadminコマンド集。fly, noclip, god, speed, espなど数百コマンド。ほぼ全てのexecutor対応。2026現在も現役のレジェンドスクリプト！
+        </p>
+      </div>
+
+      <!-- Blox Fruits Auto Farm -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Blox Fruits Auto Farm (最強)</h2>
+        <button onclick="copyScript('blox_fruits')" class="mb-4 px-6 py-3 bg-purple-700 hover:bg-red-700 rounded-lg glow-purple">Copy Script</button>
+        <pre class="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm"><code id="blox_fruits">loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Project-WD/main/WD_Loader.lua"))()</code></pre>
+        <p class="text-lg leading-relaxed mt-4">
+          Blox Fruits専用神スクリプト。auto farm、fruit sniper、raid auto、server hop、ESP満載。2026最新対応版。時間短縮効果抜群！
+        </p>
+      </div>
+
+      <!-- Owl Hub -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Owl Hub (40+ Games)</h2>
+        <button onclick="copyScript('owl_hub')" class="mb-4 px-6 py-3 bg-purple-700 hover:bg-red-700 rounded-lg glow-purple">Copy Script</button>
+        <pre class="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm"><code id="owl_hub">loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();</code></pre>
+        <p class="text-lg leading-relaxed mt-4">
+          40以上の人気ゲーム対応の巨大ハブ。aimbot、esp、flyなど自動装備。ゲーム検知で最適化。超万能！
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="theme-switcher">
+    <div class="theme-btn" id="purple-btn" onclick="setTheme('')"></div>
+    <div class="theme-btn" id="blood-btn" onclick="setTheme('blood-mode')"></div>
+    <div class="theme-btn" id="neon-btn" onclick="setTheme('neon-mode')"></div>
+  </div>
+
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".tilt"));
+
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+
+    // 検索機能 + コピー機能そのまま
+  </script>
+</body>
+</html>
