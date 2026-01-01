@@ -91,6 +91,36 @@
     }
 
     // 検索機能 + コピー機能そのまま
+     const searchInput = document.getElementById('searchInput');
+    const grid = document.getElementById('scriptGrid');
+    const cards = grid.getElementsByClassName('card');
+
+    searchInput.addEventListener('input', function() {
+      const filter = searchInput.value.toLowerCase();
+      
+      Array.from(cards).forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(filter)) {
+          card.style.display = '';
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => { card.style.display = 'none'; }, 300);
+        }
+      });
+    });
+
+    // スクリプトコピー機能
+    function copyScript(id) {
+      const code = document.getElementById(id).textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        alert('スクリプトをコピーしました！executorにペーストして実行してね😈');
+      }).catch(() => {
+        alert('コピー失敗…手動で選択してコピーしてね');
+      });
+    }
   </script>
 </body>
 </html>
