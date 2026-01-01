@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executors | Area Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="executors.html">Executors</a></li>
+        <li><a href="scripts.html">Scripts</a></li>
+        <li><a href="bypass.html">Bypass</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="ai.html">AI Assistant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container px-4 py-12">
+    <h1 class="text-6xl sm:text-7xl md:text-8xl text-center glow-text mb-16">Executors</h1>
+
+    <div class="max-w-2xl mx-auto mb-16">
+      <div class="relative">
+        <input type="text" id="searchInput" placeholder="Executor名・PC・Mobile・無料・有料などで検索..."
+               class="w-full px-8 py-6 bg-gray-900/80 border-2 border-purple-600 rounded-2xl text-white text-xl placeholder-gray-400 focus:outline-none focus:border-red-600 glow-purple transition-all"/>
+        <span class="absolute right-8 top-1/2 -translate-y-1/2 text-3xl">🔍</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="executorGrid">
+      <!-- ここに全executorカード（前回のコードそのまま） -->
+       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="executorGrid">
+      <!-- XenoからFluxusまで全部貼ってね -->
+           <!-- Xeno -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Xeno (PC専用⭕️ 無料 UNC 86%)</h2>
+        <a href="https://www.xeno.onl/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Xenoはキーなしの最高峰executorで、Robloxスクリプトを超高速実行。PC専用(Windows対応)で、iPhone/Android非対応。無料でダウンロード可能、キー不要で即使用。特徴: 外部スクリプトサポート、超低遅延、100%安定性、99.9%レスポンスタイム。コミュニティは74万ユーザー以上で、Discordで共有活発。更新頻繁でRobloxアプデ対応。UNCレベル86%で信頼性高く、初心者から上級者まで。安全設計だが、altアカウント推奨。ゲーム内でカスタムLua注入し、auto-farmやESP実装可能。公式サイトからDL、インストール後Robloxにアタッチしてスクリプトペースト実行。マルウェアフリーで安心。
+        </p>
+      </div>
+
+      <!-- Potassium -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Potassium (PC専用⭕️ 有料 UNC 99%)</h2>
+        <a href="https://rscripts.net/executor/potassium" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Potassiumはプレミアム有料executor($25生涯)で、Windows PC専用、iPhone/Android非対応。無料版なし。特徴: 99% UNC/sUNC、無敵パフォーマンス、頻繁更新でByfron回避。コミュニティで信頼高く、Redditで「ベストexecutor」と評価。高速注入、安定実行でクラッシュなし。Luaスクリプトフルサポート、レベル7実行。ダウンロード後、支払い後アクセス。安全だがantivirusオフ推奨。Robloxゲーム強化に最適、script hub内蔵。開発チームが活発で、2026更新でモバイル互換検討中だが現在PCのみ。全体的にプロユーザー向け。
+        </p>
+      </div>
+
+      <!-- Solara -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Solara (PC専用⭕️ 無料 UNC 高)</h2>
+        <a href="https://getsolara.dev/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          SolaraはByfron後初の外部executorで、Windows PC専用、無料キーなし。iPhone/Android非対応。特徴: レベル3 Lua実行、カスタムスクリプト注入、セキュリティ開発者向け。コミュニティ活発でDiscordサポート。更新頻繁、2026版でクラッシュ低減。UNCレベル高く、安定99%。UIシンプルで初心者OK。DL後インストール、Robloxアタッチで使用。script hubで人気スクリプトアクセス。安全設計、false positive回避。Roblox exploitの定番、モバイル版開発中だが現在PC限定。全体的に信頼性抜群。
+        </p>
+      </div>
+
+      <!-- Bunni -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Bunni (PC専用⭕️ 無料 UNC 95%)</h2>
+        <a href="https://bunniexecutor.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Bunniは無料の強力executor、Windows 10/11 PC専用(1.5GHz CPU,2GB RAM以上)、iPhone/Android非対応。UNC 95%(更新で100%目指す)、99%実行信頼性。特徴: UIユーザー友好、Luaスクリプト注入、ゲーム強化。Discordコミュニティ10万+でサポート。Swiftからリブランド、安全マルウェアフリー(antivirus false positive注意)。DL公式サイトから、抽出後Robloxアタッチ注入。altアカウント推奨。更新定期でRoblox対応。初心者向けデモスクリプトあり。
+        </p>
+      </div>
+
+      <!-- Volcano -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Volcano (PC専用⭕️ 無料 UNC 96%)</h2>
+        <a href="https://volcanoexecutor.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          VolcanoはElectronチームの無料executor、Windows 7-11 PC専用(1.5GHz+,2GB RAM)、iPhone/Android非対応。UNC 96%、UI簡単、更新定期でRoblox互換。特徴: Lua実行、安全設計(antivirus注意)、Discordサポート。クラッシュなし高速。DL公式、インストール後使用。コミュニティ活発、scriptテストに最適。プロ/開発者向け。
+        </p>
+      </div>
+
+      <!-- SLV -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">SLV (PC専用⭕️ 無料 UNC 99%)</h2>
+        <a href="https://velocity-executor.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          SLV(Velocity)はキーなし無料内部executor、Windows 10/11 PC専用(1.5GHz+,2GB RAM)、iPhone/Android非対応。UNC 99%、高速パフォーマンス。特徴: UI友好、安全テスト済、Discord 10万+。更新定期で優位。DL公式、抽出アタッチ注入。alt推奨。
+        </p>
+      </div>
+
+      <!-- Swift -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Swift (PC専用⭕️ 無料 UNC 高)</h2>
+        <a href="https://swiftexecutor.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Swiftはキーなし無料executor、PC専用、iPhone/Android非対応。特徴: Lua実行、auto-farm/GUI/anti-AFK、低パフォーマンス影響。更新定期Byfron回避、Discordコミュニティ。alt推奨、安全。
+        </p>
+      </div>
+
+      <!-- Tidal -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Tidal (PC対応 有料 UNC 高)</h2>
+        <a href="https://tidalss.neocities.org/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Tidalはサーバー側executor、PC対応(機種未指定)、有料(Robux 1500-4000)。iPhone/Android不明。特徴: ホストゲーム制御、NSFW/マップ変更禁止。プラン: Standard/Premium/Ultimate。Discord/YouTubeコミュニティ。更新予定。
+        </p>
+      </div>
+
+      <!-- AWP -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">AWP (PC専用⭕️ 有料 UNC 100%)</h2>
+        <a href="https://rscripts.net/executor/awp" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          AWPはプレミアムexecutor、Windows PC専用、有料サブスク。iPhone/Android非対応。UNC 100%/sUNC、Luarmorサポート、レベル8。特徴: 高速実行、多インスタンス、更新頻繁。コミュニティでトップ評価。DL公式、支払い後使用。Byfron完全回避。
+        </p>
+      </div>
+
+      <!-- モバイル系 -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">種類別 (iPhone/Android専用⭕️)</h2>
+        <a href="https://s-k.neocities.org/DL" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          このページはモバイルexecutorリスト、iPhone/Android専用。無料/有料混在。例: Delta(無料キー制、Android/iOS/PC)、Arceus X Neo(無料、Android/iOS、高機能UI/AIスクリプト)、Codex(無料、モバイル/PC、高FPS)。特徴: クロスプラットフォーム多く、script hub内蔵、更新でByfron対応。コミュニティDiscord。安全だがkey verification必要。モバイル最適化でタッチ制御強化。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Cryptic (iPhone/Android専用⭕️ 無料 UNC 95%)</h2>
+        <a href="https://crypticexecutor.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Crypticは無料Android executor(iPhone一部?)、マルチスクリプト実行。特徴: 安全セキュリティ、ミニマリストUI、高速実行高FPS。更新頻繁 undetected、コミュニティ活発。DL公式、Robloxで使用。Evon/Appleware並みパワー。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Delta (iPhone/Android⭕️ 無料 UNC 30%)</h2>
+        <a href="https://delta-executor.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Deltaは人気executor、Android/iOS/VNG/Windows/Mac対応。無料だがkey(24hプロセス or Premium)。特徴: 32/64bitサポート、Direct Install iOS、更新Roblox対応。コミュニティ公式サイト。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Krnl (iPhone/Android専用❓ サービス終了)</h2>
+        <a href="https://krnlexecutor.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Krnlはサービス終了したが、一部更新版存在? モバイル版Android/iOS対応、無料。特徴: Lua実行、高信頼、script hub。コミュニティWeAreDevs。終了のため代替推奨。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Skibx (iPhone/Android専用⭕️ 無料 UNC 高)</h2>
+        <a href="https://skibx.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          SkibxはRobloxプラグイン、iOS 14+ /Android対応、無料。特徴: タッチ制御強化、モバイルエディタ、+30% FPS、保護。Deltaベース、2.5Mユーザー。更新App Store。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Codex (iPhone/Android専用⭕️ 無料 UNC 高)</h2>
+        <a href="https://codex.lol/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Codexは無料executor、Android/iOS/PC対応。低スペOK、安定高FPS、4K、script hub。クロスプラットフォーム、更新定期、Discord。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Arceus X (iPhone/Android専用⭕️ 無料 UNC 高)</h2>
+        <a href="https://arceusx.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit → (最新)</a>
+        <a href="https://spdmteam.com/index" target="_blank" class="text-2xl glow-text underline mb-4 block">旧サイト</a>
+        <p class="text-lg leading-relaxed">
+          Arceus X V5/NeoはAndroid/iOS executor、無料(key verification)。特徴: アニメUI、AIスクリプト、極性能、翻訳/音楽/動HUB、99%スクリプトサポート。UNC高、banリスクalt推奨。Discordコミュニティ。更新2026版軽量高グラフィック。
+        </p>
+      </div>
+
+      <!-- 追加executor -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Evon (PC専用⭕️ 無料 Level 8 UNC 高)</h2>
+        <a href="https://evon.cc/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Evonはキーなしの強力PC executorで、Windows専用。特徴: Level 8実行、script hub内蔵、高速注入、99%スクリプト互換。コミュニティで信頼高く、Byfron回避更新頻繁。UIモダンで初心者OK、Discordサポート活発。モバイル非対応だがPCで安定最高。alt推奨、安全DL公式から。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Hydrogen (モバイル/PC/Mac⭕️ 無料 UNC 高)</h2>
+        <a href="https://hydrogenexecutor.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Hydrogenはクロスプラットフォームexecutor、Android/iOS/Mac/Windows対応。無料キー制だが簡単取得。特徴: script hub、FPS unlocker、安定実行。モバイルで特に人気、Macでundetected評価高。更新速くRobloxアプデ対応。コミュニティ大、チュートリアル多。banリスク低めだがalt使用推奨。全体的にバランス抜群の定番。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Zeus (PC/モバイル⭕️ 無料キーなし UNC 高)</h2>
+        <a href="https://github.com/zeus-exploit/zeus" target="_blank" class="text-2xl glow-text underline mb-4 block">GitHub/Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Zeusはキーなしの新しめexecutor、PC/モバイル両対応。特徴: 内蔵ゲームリスト、Hoho Hub/Owl Hubなど複雑スクリプト実行可能、GUIシンプル。2026で人気上昇中、更新活発。コミュニティで「簡単で強い」と評価。ban回避良いがalt必須。無料でここまで強いのは珍しい。公式はGitHub参照。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Coco Z (PC専用⭕️ 無料キーなし UNC 高)</h2>
+        <a href="https://wearedevs.net/" target="_blank" class="text-2xl glow-text underline mb-4 block">WeAreDevs/Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Coco ZはキーなしPC executor、Byfron回避強め。特徴: 高速実行、teleport内蔵、シンプルUI。2026でキーなし派に人気、クラッシュ低減。コミュニティで「即注入神」と評判。モバイル非対応だがPCで快適。安全のため公式ソースDL。※過去に一部リスク報告あり、altアカウント必須で慎重に。
+        </p>
+      </div>
+
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Fluxus (モバイル/PC⭕️ 無料 UNC 変動)</h2>
+        <a href="https://fluxusteams.com/" target="_blank" class="text-2xl glow-text underline mb-4 block">Visit →</a>
+        <p class="text-lg leading-relaxed">
+          Fluxusは昔の定番が2026で復活更新中、Android/Windows対応。無料キーなし版あり。特徴: 軽量、高FPS、script hub。モバイル最適化抜群。更新不定期だが使える時強い。banリスク中、alt推奨。懐かし派おすすめ。定期的に公式確認を。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="theme-switcher">
+    <div class="theme-btn" id="purple-btn" onclick="setTheme('')"></div>
+    <div class="theme-btn" id="blood-btn" onclick="setTheme('blood-mode')"></div>
+    <div class="theme-btn" id="neon-btn" onclick="setTheme('neon-mode')"></div>
+  </div>
+
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".tilt"));
+
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+
+    const searchInput = document.getElementById('searchInput');
+    const grid = document.getElementById('executorGrid');
+    const cards = grid.getElementsByClassName('card');
+
+    searchInput.addEventListener('input', function() {
+      const filter = searchInput.value.toLowerCase();
+      
+      Array.from(cards).forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(filter)) {
+          card.style.display = '';
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => { card.style.display = 'none'; }, 300);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
