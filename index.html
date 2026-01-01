@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Area Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <!-- particles.js削除 -->
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="executors.html">Executors</a></li>
+        <li><a href="scripts.html">Scripts</a></li>
+        <li><a href="bypass.html">Bypass</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="ai.html">AI Assistant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- particles-js div削除 -->
+
+  <div class="container px-4 py-12 min-h-screen flex flex-col items-center justify-center">
+    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold glow-text text-center mb-8 leading-tight">
+      ようこそ、<br class="sm:hidden">静かに狂った<br>情報の領域へ。
+    </h1>
+
+    <p class="text-xl sm:text-2xl glow-text text-center mb-12">ここでは、禁断の鍵が静かに息を潜めている。</p>
+
+    <div class="card w-full max-w-4xl p-8 md:p-12 tilt mb-16" data-tilt data-tilt-max="8" data-tilt-speed="400">
+      <h2 class="text-5xl sm:text-6xl glow-purple text-center mb-6">Area Hub</h2>
+      <p class="text-xl sm:text-2xl glow-text text-center">
+        Robloxの深淵へようこそ。<br class="hidden sm:block">
+        executor、script、bypass、tool…すべてがここに。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-4xl">
+      <a href="https://line.me/ti/g2/ctACQKVIXgkV5Hp0U5qESr3dGxIo-cuqx95cuQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+         class="card p-8 md:p-12 text-center glow-red hover:glow-purple transition tilt flex flex-col justify-center" data-tilt>
+        <h3 class="text-3xl sm:text-4xl mb-4">Join LINE OpenChat</h3>
+        <p class="text-lg sm:text-xl">最新情報＆コミュニティ</p>
+      </a>
+
+      <a href="https://discord.gg/C6aTDUdw"
+         class="card p-8 md:p-12 text-center glow-red hover:glow-purple transition tilt flex flex-col justify-center" data-tilt>
+        <h3 class="text-3xl sm:text-4xl mb-4">Join Discord Server</h3>
+        <p class="text-lg sm:text-xl">リアルタイム共有＆サポート</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="theme-switcher">
+    <div class="theme-btn" id="purple-btn" onclick="setTheme('')"></div>
+    <div class="theme-btn" id="blood-btn" onclick="setTheme('blood-mode')"></div>
+    <div class="theme-btn" id="neon-btn" onclick="setTheme('neon-mode')"></div>
+  </div>
+
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".tilt"));
+
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+
+    // particlesJS削除 → 粒子ゼロ
+  </script>
+</body>
+</html>
