@@ -6,7 +6,6 @@
   <title>Bypass | Area Hub</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
   <header>
@@ -21,8 +20,6 @@
       </ul>
     </nav>
   </header>
-
-  <div id="particles-js"></div>
 
   <div class="container px-4 py-12">
     <h1 class="text-6xl sm:text-7xl md:text-8xl text-center glow-text mb-16">Bypass</h1>
@@ -52,7 +49,7 @@
     <div class="card tilt max-w-5xl mx-auto" data-tilt data-tilt-max="10" data-tilt-speed="400">
       <h2 class="text-4xl sm:text-5xl glow-purple text-center mb-12">おすすめ Bypass Discordサーバー</h2>
 
-      <div class="grid grid-cols-1 gap-10 px-4 md:px-8">
+      <div class="grid grid-cols-1 gap-12 px-4 md:px-8">
         <!-- Lv.1 -->
         <div class="p-8 bg-gray-800/60 rounded-2xl border-4 border-yellow-500 hover:border-yellow-400 transition">
           <h3 class="text-3xl sm:text-4xl text-center mb-6" style="color: #ffd700; text-shadow: 0 0 20px #ffd700;">
@@ -100,7 +97,6 @@
     </div>
   </div>
 
-  <!-- テーマスイッチャー -->
   <div class="theme-switcher">
     <div class="theme-btn" id="purple-btn" onclick="setTheme('')"></div>
     <div class="theme-btn" id="blood-btn" onclick="setTheme('blood-mode')"></div>
@@ -113,17 +109,6 @@
     function setTheme(theme) {
       document.body.className = theme;
     }
-
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 60 },
-        color: { value: ["#7b2cbf", "#00b4d8", "#d00000"] },
-        size: { value: 2 },
-        opacity: { value: 0.2 },
-        move: { speed: 0.5 }
-      },
-      interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }
-    });
   </script>
 </body>
 </html>
