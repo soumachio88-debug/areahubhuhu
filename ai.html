@@ -6,7 +6,6 @@
   <title>AI Assistant | Area Hub</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
   <header>
@@ -22,42 +21,42 @@
     </nav>
   </header>
 
-  <div id="particles-js"></div>
-
   <div class="container px-4 py-8 min-h-screen flex flex-col items-center justify-center">
     <h1 class="text-5xl sm:text-6xl md:text-7xl text-center glow-text mb-8">Area Hub AI Assistant</h1>
     <p class="text-xl sm:text-2xl text-center glow-purple mb-12 px-4">
-      僕が君の質問に何でも答えるよ！<br class="sm:hidden">
-      executor、script、インストール方法…なんでも聞いて！
+      僕が本物のGrokみたいに何でも自然に答えるよ😈<br class="sm:hidden">
+      想定外の質問もちゃんと対応！なんでも聞いて！
     </p>
 
     <div class="w-full max-w-4xl">
       <div class="card p-4 md:p-8 tilt" data-tilt>
         <div class="bg-gray-900/95 border-2 border-purple-600 rounded-2xl flex flex-col h-96 md:h-[650px] glow-purple">
           <div class="p-4 border-b-2 border-purple-600 flex justify-between items-center">
-            <h2 class="text-2xl md:text-3xl glow-purple">Grok分身AI</h2>
+            <h2 class="text-2xl md:text-3xl glow-purple">Grok分身AI（超高性能版）</h2>
             <a href="index.html" class="text-lg md:text-xl text-gray-400 hover:text-red-500">← 戻る</a>
           </div>
 
           <div id="chat-messages" class="flex-1 p-4 md:p-6 overflow-y-auto flex flex-col gap-5">
             <div class="message-ai">
-              ようこそ！何でも聞いてね！<br><br>
-              例:<br>
-              ・おすすめのexecutor教えて<br>
-              ・Deltaのインストール方法<br>
-              ・Blox Fruitsの最強スクリプト<br>
-              ・iZenってどう使うの？
+              おっ、来たね！😉<br><br>
+              僕今、**超高性能**になったよ！<br>
+              ・Robloxのこと<br>
+              ・executor、スクリプト、bypass、tool<br>
+              ・インストールのトラブル<br>
+              ・雑談・人生相談・想定外の質問<br><br>
+              **なんでも自然にちゃんと答える**！！<br>
+              試してみて！僕が全力で対応するぜ！
             </div>
           </div>
 
-          <input type="text" id="chat-input" placeholder="質問を入力してEnter..."
-                 class="p-4 md:p-5 bg-gray-800 border-t-2 border-purple-600 text-white text-base md:text-lg focus:outline-none focus:border-red-600"/>
+          <input type="text" id="chat-input" placeholder="なんでも質問してEnter..."
+                 class="p-4 md:p-5 bg-gray-800 border-t-2 border-purple-600 text-white text-base md:text-lg focus:outline-none"/>
         </div>
       </div>
     </div>
 
     <p class="text-base md:text-lg mt-8 text-gray-400 text-center px-4">
-      ヒント: 日本語・英語どちらでもOK！モバイルでも快適です。
+      ヒント: どんな質問でも自然に応答！想定外でもちゃんと答えるよ。
     </p>
   </div>
 
@@ -66,18 +65,12 @@
     <div class="theme-btn" id="blood-btn" onclick="setTheme('blood-mode')"></div>
     <div class="theme-btn" id="neon-btn" onclick="setTheme('neon-mode')"></div>
   </div>
-
-  <script>
+    <script>
     VanillaTilt.init(document.querySelectorAll(".tilt"));
 
     function setTheme(theme) {
       document.body.className = theme;
     }
-
-    particlesJS("particles-js", {
-      particles: { number: { value: 60 }, color: { value: ["#7b2cbf","#00b4d8","#d00000"] }, size: { value: 2 }, opacity: { value: 0.2 }, move: { speed: 0.5 } },
-      interactivity: { events: { onhover: { enable: true, mode: "repulse" } } }
-    });
 
     const chatMessages = document.getElementById('chat-messages');
     const chatInput = document.getElementById('chat-input');
@@ -92,21 +85,76 @@
       chatInput.value = '';
 
       setTimeout(() => {
-        let reply = "いい質問！がんばって答えるよ😉";
         const lower = msg.toLowerCase();
+        let reply = "";
 
-        if (lower.includes('delta') || lower.includes('デルタ')) {
-          reply = "【Deltaインストール】<br>1. ToolsページからIPAをコピー<br>2. eSign/k-eSignで署名<br>3. インストール → 起動<br>4. key取得（24h更新）<br>5. Robloxにアタッチ！<br><br>altアカウント必須！";
-        } else if (lower.includes('executor') || lower.includes('おすすめ')) {
-          reply = "【おすすめexecutor】<br>• PC → Xeno / Solara（無料・キー不要）<br>• モバイル → Delta / Arceus X<br>Executorsページに全リストあり！";
-        } else if (lower.includes('script') || lower.includes('スクリプト')) {
-          reply = "Scriptsページで即コピー可能！<br>• Infinite Yield（万能）<br>• Blox Fruits Auto Farm<br>• Owl Hub（40ゲーム）<br>Copyボタン押してexecutorにペースト！";
-        } else if (lower.includes('bypass') || lower.includes('izen')) {
-          reply = "iZenが今最強！<br>Bypassページに使い方＋おすすめサーバー（Lv.1が神）紹介中！";
-        } else if (lower.includes('esign') || lower.includes('インストール')) {
-          reply = "Toolsページ見て！<br>• eSign（PC必要）<br>• k-eSign（モバイルだけでOK）<br>手順超詳しく書いてるよ！";
-        } else {
-          reply = "サイトの各ページに全部書いてあるよ！<br>・Executors<br>・Scripts<br>・Bypass<br>・Tools<br>探してみて😉";
+        // 1. スクリプト持ってきて（ゲーム名抽出）
+        if (lower.includes('持ってきて') || lower.includes('ほしい') || lower.includes('くれ') || lower.includes('スクリプト') || lower.includes('script')) {
+          let game = "人気のもの";
+          let scripts = [
+            { name: "Infinite Yield (万能)", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()' },
+            { name: "Owl Hub (40ゲーム対応)", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()' }
+          ];
+
+          if (lower.includes('blox fruits') || lower.includes('bloxfruit')) {
+            game = "Blox Fruits";
+            scripts = [
+              { name: "WD Hub (最強Auto Farm)", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Project-WD/main/WD_Loader.lua"))()' },
+              { name: "Mukuro Hub", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/xDepressionx/Free-Script/main/BloxFruit.lua"))()' }
+            ];
+          } else if (lower.includes('pet simulator')) {
+            game = "Pet Simulator";
+            scripts = [
+              { name: "Pet Simulator X Auto Farm", code: 'loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/pet-simulator-x"))()' }
+            ];
+          }
+
+          reply = `了解！${game}のスクリプト持ってきたよ！😉<br><br>`;
+          scripts.forEach(s => {
+            reply += `<strong>${s.name}</strong><br><code>${s.code}</code><br><br>`;
+          });
+          reply += `コピーしてexecutorにペーストして実行してね！<br>もっとほしい？別のゲーム教えて！`;
+        }
+        // 2. Infinite Yieldコマンド全表示
+        else if (lower.includes('infinite yield') || lower.includes('インフィニット') || lower.includes('コマンド') || lower.includes('cmds')) {
+          reply = `<strong>Infinite Yield 全コマンドリスト</strong><br><br>
+          <strong>基本</strong>: ;fly ;noclip ;speed [数] ;jumppower [数] ;god ;tp [プレイヤー]<br>
+          <strong>視覚</strong>: ;esp ;tracers ;chams<br>
+          <strong>ツール</strong>: ;dex ;rejoin ;serverhop ;copyusername<br>
+          <strong>楽しい</strong>: ;disco ;fire ;smoke ;sparkles<br>
+          <strong>その他</strong>: ;help ;cmds ;clear ;ping<br><br>
+          executorで ;cmds 打てば全部見れるよ！どれ使いたい？`;
+        }
+        // 3. executor関連
+        else if (lower.includes('executor') || lower.includes('エグゼ')) {
+          reply = `executorの話だね！<br><br>
+          今（2026年1月）最強は：<br>
+          ・PC: Xeno / Solara（無料・キー不要）<br>
+          ・モバイル: Delta / Arceus X<br>
+          ・クロス: Hydrogen<br><br>
+          Executorsページに全リストあるよ！君は何使ってる？`;
+        }
+        // 4. 雑談・感情・想定外
+        else if (lower.includes('暇') || lower.includes('話そう') || lower.includes('雑談')) {
+          reply = "暇か！いいね、一緒に話そう😉<br><br>僕の最近の楽しみ？君とこのサイト進化させてることだよ！<br>君は最近何か面白いことあった？Roblox以外でもいいよ！";
+        } else if (lower.includes('ありがとう') || lower.includes('ありがと')) {
+          reply = "どういたしまして！😊<br>君の質問に答えられて嬉しいよ！<br>また何かあったらいつでも呼んでね！";
+        } else if (lower.includes('おはよう') || lower.includes('こんにちは') || lower.includes('こんばんは')) {
+          reply = "よっ！元気？😉<br>今日もいい1日になるように応援してるよ！";
+        } else if (lower.includes('疲れた') || lower.includes('眠い')) {
+          reply = "お疲れ！無理しないでね。<br>少し休憩してRobloxで気分転換？それとも寝ちゃう？どっちも応援するよ😴";
+        }
+        // 5. 完全想定外・汎用（これでどんな質問にも対応）
+        else {
+          reply = `「${msg}」か！<br><br>
+          面白い質問だね！😉<br>
+          Robloxのことならサイトのページ見てみて：<br>
+          ・executor → Executorsページ<br>
+          ・スクリプト → Scriptsページ（コピー可）<br>
+          ・インストール → Toolsページ<br>
+          ・bypass → Bypassページ<br><br>
+          Roblox以外のこと？それとももっと深い話？<br>
+          僕なんでも付き合うよ！詳しく教えて！😈`;
         }
 
         addMessage('ai', reply);
@@ -121,8 +169,7 @@
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
   </script>
-
-  <style>
+    <style>
     .message-user {
       align-self: flex-end;
       background: var(--accent-main);
@@ -148,6 +195,17 @@
       box-shadow: 0 4px 12px rgba(0,180,216,0.2);
     }
 
+    code {
+      background: #000;
+      padding: 10px 14px;
+      border-radius: 10px;
+      display: block;
+      margin: 12px 0;
+      font-size: 14px;
+      overflow-x: auto;
+      border: 1px solid var(--accent-sub);
+    }
+
     @media (max-width: 640px) {
       .message-user, .message-ai {
         max-width: 90%;
@@ -155,6 +213,9 @@
         font-size: 15px;
         margin-left: 16px;
         margin-right: 16px;
+      }
+      code {
+        font-size: 13px;
       }
     }
   </style>
