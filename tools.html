@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools | Area Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="executors.html">Executors</a></li>
+        <li><a href="scripts.html">Scripts</a></li>
+        <li><a href="bypass.html">Bypass</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="ai.html">AI Assistant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container px-4 py-12">
+    <h1 class="text-6xl sm:text-7xl md:text-8xl text-center glow-text mb-16">Tools</h1>
+
+    <!-- 検索バー + ツールカードそのまま -->
+      <div class="max-w-2xl mx-auto mb-16">
+      <div class="relative">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="ツール名・eSign・Delta・installなどで検索..."
+          class="w-full px-8 py-6 bg-gray-900/80 border-2 border-purple-600 rounded-2xl text-white text-xl placeholder-gray-400 focus:outline-none focus:border-red-600 glow-purple transition-all"
+        />
+        <span class="absolute right-8 top-1/2 -translate-y-1/2 text-3xl">🔍</span>
+      </div>
+    </div>
+
+    <!-- Toolsカードグリッド -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="toolGrid">
+
+      <!-- eSignサイト -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">eSign (iOS署名ツール)</h2>
+        <a href="https://techybuff.com/esign/" target="_blank" class="text-2xl glow-text underline mb-4 block" onclick="copyToClipboard('https://techybuff.com/esign/'); return false;">Copy URL → (クリックでコピー)</a>
+        <p class="text-lg leading-relaxed">
+          eSignは脱獄不要のiOSアプリ署名ツールで、IPAファイルを自己署名してデバイスにインストール可能。Windows/Mac対応、無料。特徴: Apple IDで証明書生成、複数デバイス対応、無制限署名（有料版で）。2026現在も安定。インストール方法: 1. PCにAltStoreまたはSideloadlyインストール。2. eSign公式からアプリDL（techybuff.com経由）。3. iPhoneをPC接続、証明書インポート（Apple Developerアカウント必要）。インポート方法: eSignアプリ起動 → IPAファイル選択（ファイルマネージャーから） → 署名ボタン押す → インストール。エラー時: VPNオフ、iOSバージョン確認（16+推奨）。信頼設定: 設定→一般→プロファイル→eSignを信頼。追加機能: バッチ署名、証明書管理。banリスク低いがaltアカウント推奨。コミュニティでチュートリアル多、安全DL公式から。
+        </p>
+      </div>
+
+      <!-- k-eSignサイト -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">k-eSign (iOS署名ツール)</h2>
+        <a href="https://khoindvn.io.vn/" target="_blank" class="text-2xl glow-text underline mb-4 block" onclick="copyToClipboard('https://khoindvn.io.vn/'); return false;">Copy URL → (クリックでコピー)</a>
+        <p class="text-lg leading-relaxed">
+          k-eSignはeSignのバリエーションで、ベトナムベースのiOS署名ツール。脱獄なしでIPAサイドロード可能、無料/有料プラン。特徴: 簡単UI、証明書自動生成、iOS 15-17対応。更新頻繁でByfron回避に強い。インストール方法: 1. iPhoneブラウザでサイトアクセス。2. プロファイルDL（khoindvn.io.vnから）。3. 設定→一般→プロファイルインストール。インポート方法: k-eSignアプリ開く → IPAインポート（共有シートから） → 署名＆インストール。エラー回避: 機内モードオンオフ、Apple ID再ログイン。追加機能: 自動更新チェック、複数IPAバッチ処理。モバイル専用でPC不要。banリスク中、alt使用。コミュニティ活発、安全のため公式のみ使用。
+        </p>
+      </div>
+
+      <!-- Delta IPAダウンロード -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Delta (モバイルExecutor IPA)</h2>
+        <a href="https://www.mediafire.com/file/i4p17hpjm8q81jc/Delta-2.701.ipa/file?dkey=k8zqi8l2bp5&r=1723" target="_blank" class="text-2xl glow-text underline mb-4 block" onclick="copyToClipboard('https://www.mediafire.com/file/i4p17hpjm8q81jc/Delta-2.701.ipa/file?dkey=k8zqi8l2bp5&r=1723'); return false;">Download IPA → (クリックでコピー)</a>
+        <p class="text-lg leading-relaxed">
+          DeltaはiOS/Android対応の人気executor（UNC 30%）。Robloxスクリプト実行、script hub内蔵。無料キー制（24h or Premium）。特徴: 32/64bitサポート、Direct Install。インストール方法: 1. MediaFireからIPA DL（上リンク）。2. PCにSideloadly/AltStoreインストール。3. iPhone接続、Apple IDで署名（Developerアカウント推奨）。4. IPAドラッグ＆インストール。インポート方法: Deltaアプリ開く → スクリプトタブ → Luaコードペースト or hubからインポート → 実行。エラー時: iOS再起動、antivirusオフ、証明書信頼（設定→一般→プロファイル）。追加機能: FPS unlock、auto-key生成。ban回避: altアカウント、短時間使用。2026版で高FPS最適化。コミュニティ公式サイトでTips多、安全DL推奨。
+        </p>
+      </div>
+
+      <!-- 追加ツール例: FPS Unlocker -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Roblox FPS Unlocker</h2>
+        <a href="https://github.com/axstin/rbxfpsunlocker" target="_blank" class="text-2xl glow-text underline mb-4 block">GitHub →</a>
+        <p class="text-lg leading-relaxed">
+          RobloxのFPS上限解除ツール（60→無制限）。PC専用、無料。特徴: 低遅延、executor互換。インストール: GitHubからDL → 抽出 → Roblox起動前に実行。便利: auto-launchオプション。
+        </p>
+      </div>
+
+      <!-- 追加ツール例: Multiple Roblox -->
+      <div class="card tilt" data-tilt data-tilt-max="10" data-tilt-speed="400">
+        <h2 class="text-4xl glow-purple mb-4">Multiple Roblox Instances</h2>
+        <a href="https://wearedevs.net/d/Multiple%20RBX%20Games" target="_blank" class="text-2xl glow-text underline mb-4 block">Download →</a>
+        <p class="text-lg leading-relaxed">
+          複数Robloxアカウント同時起動ツール。PC専用、無料。特徴: altアカウント管理簡単。インストール: DL → 実行 → Roblox複数起動。便利: 自動切替機能。
+        </p>
+      </div>
+
+    </div>
+ </div>
+
+  <div class="theme-switcher">
+    <div class="theme-btn" id="purple-btn" onclick="setTheme('')"></div>
+    <div class="theme-btn" id="blood-btn" onclick="setTheme('blood-mode')"></div>
+    <div class="theme-btn" id="neon-btn" onclick="setTheme('neon-mode')"></div>
+  </div>
+
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".tilt"));
+
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+
+    // 検索・コピー機能そのまま
+        const searchInput = document.getElementById('searchInput');
+    const grid = document.getElementById('toolGrid');
+    const cards = grid.getElementsByClassName('card');
+
+    searchInput.addEventListener('input', function() {
+      const filter = searchInput.value.toLowerCase();
+      
+      Array.from(cards).forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(filter)) {
+          card.style.display = '';
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => { card.style.display = 'none'; }, 300);
+        }
+      });
+    });
+
+    // URLコピー機能
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('URLをコピーしました！');
+      }).catch(err => {
+        console.error('コピー失敗:', err);
+      });
+    }
+  </script>
+</body>
+</html>
